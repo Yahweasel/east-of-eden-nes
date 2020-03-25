@@ -1,0 +1,20 @@
+Box drawing:
+#___\
+|   |
+|   |
+|   |
+%___&
+
+Box drawing with top-left box:
+`>>_\
+<^^ |
+`~~ |
+|   |
+%___&
+
+Box drawing with thru-line:
+#_[_\
+| | |
+| | |
+| | |
+%_]_&

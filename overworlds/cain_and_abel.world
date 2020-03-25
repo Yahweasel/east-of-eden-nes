@@ -1,0 +1,33 @@
+palette 0f 28 30 30     0f 19 18 36
+chr back1
+
+# Grass
+def space   00 1
+
+# Trees
+def ^       08 1 1
+def #       0c 1 1
+def T       10 1 1
+def _       00 1 0 test0
+
+# Wheat
+def w       04 0
+
+sprite 1d  7 cain 20 cainAndAbel
+
+world
+################################
+####TTTTT####TT#TT####TT##TT####
+###TwwwwwTTTTwwTwwTTTTwwTT  T###
+##Twwwwwwwwwwwwwwwwwwwwww    ###
+##wwwwwwwwwwwwwwwwwwwwwww    ###
+##^wwwwwwwwwwwwwwwwwwwwww    T##
+##Twwwwwwwwwwwwwwwwwwwwww     TT
+##wwwwwwwwwwwwwwwwwwwwww        
+##^wwwwwwwwwwwwwwwwwwwww      ^^
+##Twwwwwwwwwwwwwwwwwwwww      ##
+##wwwwwwwwwwwwwwwwwwwwww      ##
+##^wwwwwwwwwwwwwwwwwwwww     ^##
+###wwwwwwwwwwwwwwwwwwwwww    ###
+###^^^wwwww^wwww^^^ww^^ww^^ ^###
+######^^^^^#^^^^###^^##^^##^####

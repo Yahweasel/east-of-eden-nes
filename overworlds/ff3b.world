@@ -1,0 +1,108 @@
+palette 0f 16 19 30
+chr ff3b
+def *       14 0 1
+def space   2c 0
+def !       08 0 0 test0
+def @       08 0 0 test1
+def #       08 0 0 test2
+def $       08 0 0 test3
+def %       08 0 0 test4
+def ^       08 0 0 test5
+def &       08 0 0 test6
+def (       08 0 0 test7
+def )       08 0 0 test8
+
+def 0 0 0
+def 1 4 0
+def 2 8 0
+def 3 c 0
+def 4 10 0
+def 5 14 0
+def 6 18 0
+def 7 1c 0
+def 8 20 0
+def 9 24 0
+def a 28 0
+def b 2c 0
+def c 30 0
+def d 34 0
+def e 38 0
+def f 3c 0
+def g 40 0
+def h 44 0
+def i 48 0
+def j 4c 0
+def k 50 0
+def l 54 0
+def m 58 0
+def n 5c 0
+def o 60 0
+def p 64 0
+def q 68 0
+def r 6c 0
+def s 70 0
+def t 74 0
+def u 78 0
+def v 7c 0
+def w 80 0
+def x 84 0
+def y 88 0
+def z 8c 0
+def A 90 0
+def B 94 0
+def C 98 0
+def D 9c 0
+def E a0 0
+def F a4 0
+def G a8 0
+def H ac 0
+def I b0 0
+def J b4 0
+def K b8 0
+def L bc 0
+def M c0 0
+def N c4 0
+def O c8 0
+def P cc 0
+def Q d0 0
+def R d4 0
+def S d8 0
+def T dc 0
+def U e0 0
+def V e4 0
+def W e8 0
+def X ec 0
+def Y f0 0
+def Z f4 0
+
+world
+****************
+****************
+**0123       !**
+**4567       @**
+**89ab       #**
+**cdef       $**
+**ghij       %**
+**klmn       ^**
+**opqr       &**
+**stuv       (**
+**ABCD       )**
+**EFGH        **
+**IJKL        **
+**MNOP        **
+**QRST        **
+**UVWX        **
+**YZ          **
+**            **
+**            **
+**            **
+**            **
+**            **
+**            **
+**            **
+**            **
+**            **
+**            **
+**            **
+****************
+****************

@@ -1,0 +1,61 @@
+[
+    {
+        "name": "0",
+        "sprites": [],
+        "characters": [
+            "abel",
+            "cain"
+        ]
+    },
+
+    {
+        "name": "c1",
+        "chrs": [
+            ["icons1", 2],
+            ["ascii", 6],
+            ["title", 8],
+            ["back1", 8],
+            ["ff3a", 8],
+            ["ff3b", 8],
+            ["ff3c", 8],
+            ["ff3d", 8],
+            ["abel", 2, "These 8 are spr1"],
+            ["cain", 2],
+            ["spr1_3", 2],
+            ["spr1_4", 2],
+            ["spr1_5", 2],
+            ["spr1_6", 2],
+            ["spr1_7", 2],
+            ["spr1_8", 2]
+        ]
+    },
+
+    {
+        "name": "w1",
+        "worlds": [
+            "cain_and_abel",
+            "ff3a",
+            "ff3b",
+            "ff3c",
+            "ff3d"
+        ]
+    },
+
+    {
+        "name": "a1",
+        "actions": [
+            "cainAndAbel",
+            "test0",
+            "test1",
+            "test2",
+            "test3",
+            "test4",
+            "test5",
+            "test6",
+            "test7",
+            "test8",
+            "testCain",
+            "testTalk"
+        ]
+    }
+]

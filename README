@@ -1,0 +1,55 @@
+This is an absurd bootleg game of East of Eden for the NES/Famicom. Here is its
+story:
+
+I play a lot of bootleg games on my YouTube channel,
+https://youtube.com/c/Yahweasel . Because of its favorable simplicity to power
+ratio, a lot of bootleg games, particularly coming out of China, are for the
+NES/Famicom, and the range of media that gets bootlegged is truly perplexing.
+Some examples are obvious and even sensible: Downports of games for other
+platforms, such as Shenzhen Nanjing's Final Fantasy VII. Some are inane, but
+follow a model of “bootleg any popular media”, such as Union Bond's Titanic
+1912, which follows the plot of the movie Titanic (sort of). In my perusals, I
+came across a bootleg of The Count of Monte Cristo, and that led me to ask the
+question: Is there no media too obscure[1] or unsuited to bootleg?
+
+So, I scoured the list of novels I'd read, and chose one I thought would be the
+most inane of which to make a bootleg video game: East of Eden, by John
+Steinbeck. It is a cerebral novel, with brief moments of action punctuating
+long stretches of characterization, the latter of which is essentially entirely
+lost in such an adaptation.
+
+Bootleg games are usually quite large. People have a tendency to be impressed
+by this, but the simple fact is that the reason large NES games were so
+impressive in the 80's was manufacturing; a lazy programmer can take as much
+space as they wish, and there is technically no size limit whatever on an NES
+game's accessible program code and data. Bootleg games take advantage of this
+not just to make unusually long games, but to write them unusually lazily.  I
+have followed in this noble tradition, and implemented the entire game in C,
+compiled by cc65. Undoubtedly it could be made smaller with carefully-written
+assembly code, but why?
+
+cc65 supports the NES, but in a limited capacity, so some odd tricks are done
+herein. In particular, NES cartridges have a system of “banking”, i.e.,
+swapping out program code, and cc65 doesn't really support it. This game uses
+banking (BNROM), and to support it, a tiny bit of custom bank-switching code is
+included. The bank-switching code is callable as a normal C function which
+returns not just to the correct code but to the correct bank, so cross-bank
+calls can be implemented as mostly normal C calls. However, this has several
+implications on the code.
+
+Each bank is compiled as its own program. As such, the BSS and DATA sections
+(non-const global and static variables) are NOT SHARED across banks. Any call
+that jumps to another bank should assume that all global and static variables
+are clobbered by the jump. However, global and static variables are mandatory
+to write efficient code for the 6502, so they're not so much avoided as used
+with care. `globals.c` is included in every bank, so global data that ought to
+be shared among all banks should be included there. Further, the DATA segment
+(pre-initialized global data) is essentially useless, as it won't be
+initialized automatically on bank switches. So, global variables should not be
+assumed to be pre-initialized, and must be initialized manually.
+
+This makes for a slightly unusual C style, but nothing too difficult. Be
+thoughtful of what calls what, and the coding is quite easy.
+
+[1] In all probability, this was actually a bootleg of the 2002 movie, and not
+the original novel, but that is not what came to mind for me.

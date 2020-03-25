@@ -1,0 +1,58 @@
+The art assets of this game are 100% stolen. I make no claim of the legality of
+their distribution, and will in fact claim quite plainly to the contrary. This
+game is a parody of bootleg games—and, in fact, a bootleg game—so the stolen
+art assets is a necessary part of the parody. It would be perfectly possible to
+use the engine with original, legal art assets.
+
+
+This code is under broad F/OSS licenses. However, as the F/OSS community in
+general is pretty awful at understanding their own licenses, I want to make one
+fact very clear: It is a violation of the license terms to remove license text
+from the source OR BINARY. The actual runnable game must include license text;
+in the normal build, this text is available by pressing select at the title
+screen, but it may be moved elsewhere so long as it's accessible.
+
+
+Most of this code, including any code lacking a license header, is under the
+ISC license:
+
+---
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+---
+
+
+This code requires the cc65 compiler and libraries, and includes some cc65
+initialization code. Those components are under the following license:
+
+---
+This software is provided 'as-is', without any express or implied warranty.
+In no event will the authors be held liable for any damages arising from
+the use of this software.
+
+Permission is granted to anyone to use this software for any purpose,
+including commercial applications, and to alter it and redistribute it
+freely, subject to the following restrictions:
+
+1. The origin of this software must not be misrepresented; you must not
+claim that you wrote the original software. If you use this software in
+a product, an acknowledgment in the product documentation would be
+appreciated but is not required.
+
+2. Altered source versions must be plainly marked as such, and must not
+be misrepresented as being the original software.
+
+3. This notice may not be removed or altered from any source distribution.
+---
+
+I have explicitly added the license text to source files where applicable to
+clarify which components come from cc65.

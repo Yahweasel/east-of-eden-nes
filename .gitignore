@@ -1,0 +1,8 @@
+*.swp
+*.o
+*.bank
+*.map
+*.nes
+*-gen-*
+*.lib
+mednafen/
