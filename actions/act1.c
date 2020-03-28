@@ -115,12 +115,16 @@ char cdecl cainAndAbel(char idx)
 
     loadCharacter(0, CHAR_cyrus);
 
+    pos.bank = WORLD_civil_war_battlefield_BANK;
+    pos.idx = WORLD_civil_war_battlefield;
+    pos.xscreen = pos.yscreen = 0;
+    pos.xt = pos.yt = 8;
+    pos.dir = SPRITE_RIGHT;
+
     fullscreen("PART I");
 
     pause(60);
 
-    pos.bank = WORLD_civil_war_battlefield_BANK;
-    pos.idx = WORLD_civil_war_battlefield;
     return 0;
 }
 
@@ -177,6 +181,25 @@ char cdecl peeweeReq(char idx)
     overworldReload(0);
 
     return 1;
+}
+
+char cdecl peeweeLeave(char idx)
+{
+    pos.bank = WORLD_peewee_BANK;
+    pos.idx = WORLD_peewee;
+    pos.xscreen = pos.yscreen = 0;
+    pos.xt = pos.yt = 8;
+    pos.dir = SPRITE_RIGHT;
+
+    fadeout();
+    pause(60);
+
+    overworldLoad(pos.bank, pos.idx);
+    fadein();
+
+    dialogue(1, "Charles: lol u sux bruh");
+
+    return 0;
 }
 
 #define TEST(n) \

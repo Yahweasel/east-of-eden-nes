@@ -29,6 +29,7 @@ static uint x, y;
  *  c: left top l, left top r, left bot l, left bot r,
  * 10: left bot w1 l, left bot w1 r, left bot w2 l, left bot w2 r,
  * 14: bat top l, bat top r, bat bot l, bat bot r, bat bot act l, bat bot act r
+ * 1a: extra top l, extra top r, extra bot l, extra bot r
  *
  * The second-to-top bit is used to indicate flipping
  */
@@ -73,7 +74,13 @@ static const char offCache[] = {
     /* Reversed battle action */
     0x55, 0x54, 0x59, 0x58,
     0x55, 0x54, 0x59, 0x58,
-    0x55, 0x54, 0x59, 0x58
+    0x55, 0x54, 0x59, 0x58,
+
+    /* Extra */
+    0x1a, 0x1b, 0x1c, 0x1d,
+    0x1a, 0x1b, 0x1c, 0x1d,
+    0x1a, 0x1b, 0x1c, 0x1d,
+    0x1a, 0x1b, 0x1c, 0x1d
 };
 
 void updateSprite(char idx)

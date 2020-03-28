@@ -3,7 +3,14 @@ chr back1
 
 # Tile
 def space   14 1
+
+# Leave
+def _       14 1 0 peeweeLeave
+
+# Stool
 def ^       18 1
+
+# Wall
 def #       1c 1 1
 
 sprite 5   5 cyrus 10
@@ -40,5 +47,5 @@ world
 #              #
 #              #
 #              #
-#              #
-################
+#######_########
+####### ########

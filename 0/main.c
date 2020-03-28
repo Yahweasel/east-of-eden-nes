@@ -54,7 +54,7 @@ void main()
     clrscr();
     goto gettoit;
 
-    /* Load our doofusy title screen */
+    /* Lod our doofusy title screen */
     l = 0x2108;
     for (i = 0x80; i; i += 0x10) {
         for (c = 0; c < 16; c++)

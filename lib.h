@@ -153,12 +153,15 @@ void popScrollInfo(struct ScrollInfo *si);
 /* Switch to an overworld on the given bank */
 #define overworld(bank, idx) (farcall1((idx), (bank)))
 
+/* Load an overworld on the given bank, but don't actually start overworld code */
+#define overworldLoad(bank, idx) (gfarcall1((idx), (bank), 2))
+
 /* Reload an overworld's graphics from the given row, if nothing has been
  * really unloaded */
-#define overworldReload(from) (gfarcall1((from), pos.bank, 2))
+#define overworldReload(from) (gfarcall1((from), pos.bank, 4))
 
 /* Fully reload an overworld, after unloading it */
-#define overworldFullReload() (gfarcall0(pos.bank, 4))
+#define overworldFullReload() (gfarcall0(pos.bank, 6))
 
 /* Pause for a number of frames */
 #define pause(frames) do { \
@@ -225,6 +228,7 @@ void popScrollInfo(struct ScrollInfo *si);
 #define SPRITE_RIGHT    0x30
 #define SPRITE_BATTLE   0x40
 #define SPRITE_ENEMY    0x50
+#define SPRITE_EXTRA    0x60
 
 /* Default fade times */
 #define FADE_TIME_SLOW      10

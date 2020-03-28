@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019 Yahweasel
+ * Copyright (c) 2019-2020 Yahweasel
  *
  * Permission to use, copy, modify, and/or distribute this software for any
  * purpose with or without fee is hereby granted, provided that the above
@@ -536,11 +536,9 @@ static char performSpriteAction(char idx)
     return 1;
 }
 
-/* The actual overworld behavior */
-void cdecl overworldPrime(char idx)
+/* Load in an overworld */
+void cdecl overworldLoadPrime(char idx)
 {
-    static char i, inp;
-
     world = jumpTable[idx];
 
     /* Figure out how we ought to be centered */
@@ -548,6 +546,16 @@ void cdecl overworldPrime(char idx)
 
     /* Load in the world */
     overworldFullReload();
+}
+
+/* The actual overworld behavior */
+void cdecl overworldPrime(char idx)
+{
+    static char i, inp;
+
+    /* Load the world */
+    overworldLoadPrime(idx);
+
     fadein();
 
     /* Now take overworld input */
@@ -776,6 +784,7 @@ void cdecl overworldFullReloadPrime()
 #pragma data-name ("JUMPS")
 #define J(x) void *x ## jump = x
 J(overworldPrime);
+J(overworldLoadPrime);
 J(overworldReloadPrime);
 J(overworldFullReloadPrime);
 #undef J

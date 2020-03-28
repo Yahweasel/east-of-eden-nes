@@ -6,6 +6,8 @@
 .word _cyrusVsConfederate
 .import _peeweeReq
 .word _peeweeReq
+.import _peeweeLeave
+.word _peeweeLeave
 .import _test0
 .word _test0
 .import _test1
