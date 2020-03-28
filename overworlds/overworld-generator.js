@@ -186,7 +186,7 @@ outp.write(".byte " + w + "," + h + "," + palette.join(",") + ",chr_" + chr + "_
             outp.write(",0,0");
     }
     for (; i < 15; i++)
-        outp.write(",255,0,0,0,0,0,0");
+        outp.write(",255,0,0,0,0,0,0,0");
 })();
 
 // Then the actions
