@@ -113,11 +113,50 @@ char cdecl cainAndAbel(char idx)
 
     pause(60);
 
+    loadCharacter(0, CHAR_cyrus);
+
     fullscreen("PART I");
 
     pause(60);
 
-    pos.bank = 0;
+    pos.bank = WORLD_civil_war_battlefield_BANK;
+    pos.idx = WORLD_civil_war_battlefield;
+    return 0;
+}
+
+/* Part I Chapter 3 Section 1 */
+char cdecl cyrusVsConfederate(char idx)
+{
+    static char i;
+    char b;
+
+    dialogue(idx, "Confederate: Have at thee!");
+
+    for (i = 0; i < 4; i++)
+        loadCharacter(NUM_CHARACTERS+i, SPR_confederate);
+
+    battleConfig.inescapable = 1;
+    b = battle();
+
+    if (b) {
+        discardScrollInfo();
+        clrscr();
+        fullscreen("OK, I'm not gonna warn you again. YOU'RE NOT SUPPOSED TO WIN.");
+        pos.bank = 0;
+        return 0;
+    }
+
+    overworldFullReload();
+    fadein();
+
+    dialogue(0, "Cyrus: My leg!");
+
+    overworldReload(0);
+
+    fadeout();
+
+    loadCharacter(0, CHAR_cyrus_oneleg);
+
     return 0;
 }
 

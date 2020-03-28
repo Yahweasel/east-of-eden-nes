@@ -2,6 +2,8 @@
 .segment "JUMPS"
 .import _cainAndAbel
 .word _cainAndAbel
+.import _cyrusVsConfederate
+.word _cyrusVsConfederate
 .import _test0
 .word _test0
 .import _test1

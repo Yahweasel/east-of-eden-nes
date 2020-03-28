@@ -7,8 +7,22 @@ _spriteTable:
 .word _abel
 .import _cain
 .word _cain
+.import _cyrus
+.word _cyrus
+.import _confederate
+.word _confederate
+.import _cyrus_oneleg
+.word _cyrus_oneleg
+.import _every_woman
+.word _every_woman
 _characterTable:
 .import _abelC
 .word _abelC
 .import _cainC
 .word _cainC
+.import _cyrusC
+.word _cyrusC
+.import _confederateC
+.word _confederateC
+.import _cyrus_onelegC
+.word _cyrus_onelegC

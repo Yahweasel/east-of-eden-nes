@@ -1,10 +1,15 @@
 [
     {
         "name": "0",
-        "sprites": [],
+        "sprites": [
+            "every_woman"
+        ],
         "characters": [
             "abel",
-            "cain"
+            "cain",
+            "cyrus",
+            "confederate",
+            "cyrus_oneleg"
         ]
     },
 
@@ -21,10 +26,10 @@
             ["ff3d", 8],
             ["abel", 2, "These 8 are spr1"],
             ["cain", 2],
-            ["spr1_3", 2],
-            ["spr1_4", 2],
-            ["spr1_5", 2],
-            ["spr1_6", 2],
+            ["cyrus", 2],
+            ["confederate", 2],
+            ["cyrus_oneleg", 2],
+            ["every_woman", 2],
             ["spr1_7", 2],
             ["spr1_8", 2]
         ]
@@ -34,6 +39,7 @@
         "name": "w1",
         "worlds": [
             "cain_and_abel",
+            "civil_war_battlefield",
             "ff3a",
             "ff3b",
             "ff3c",
@@ -45,6 +51,7 @@
         "name": "a1",
         "actions": [
             "cainAndAbel",
+            "cyrusVsConfederate",
             "test0",
             "test1",
             "test2",

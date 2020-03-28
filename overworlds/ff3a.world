@@ -74,7 +74,7 @@ def X ec 0
 def Y f0 0
 def Z f4 0
 
-sprite b 3 cain 20 testCain
+sprite b 3 confederate 20 testCain
 
 world
 ****************

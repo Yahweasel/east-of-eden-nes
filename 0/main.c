@@ -136,6 +136,10 @@ void main()
     pos.dir = SPRITE_DOWN;
     loadCharacter(0, CHAR_abel);
 
+    pos.bank = WORLD_civil_war_battlefield_BANK;
+    pos.idx = WORLD_civil_war_battlefield;
+    loadCharacter(0, CHAR_cyrus);
+
     /* And run the game */
     while (1) {
         if (!pos.bank) {

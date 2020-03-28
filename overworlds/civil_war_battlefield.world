@@ -1,0 +1,34 @@
+palette 0f 28 30 30     0f 19 18 36
+chr back1
+
+# Grass
+def space   00 1
+
+# Trees
+def ^       08 1 1
+def #       0c 1 1
+def T       10 1 1
+
+sprite 1c  7 every_woman 20
+sprite 1e  5 confederate 20 cyrusVsConfederate
+sprite 1e  6 confederate 20 cyrusVsConfederate
+sprite 1e  7 confederate 20 cyrusVsConfederate
+sprite 1e  8 confederate 20 cyrusVsConfederate
+sprite 1e  9 confederate 20 cyrusVsConfederate
+
+world
+################################
+####TTTTT####TT#TT####TT##TT####
+###T     TTTT  T  TTTT  TT  T###
+##T                          TT#
+##                             T
+##^                             
+##T                             
+##                              
+##^                             
+##T                             
+##                             ^
+##^                          ^^#
+###                          ###
+###^^^     ^    ^^^  ^^  ^^ ^###
+######^^^^^#^^^^###^^##^^##^####

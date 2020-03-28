@@ -5,4 +5,6 @@
 *.nes
 *-gen-*
 *.lib
+*.bmp
+*.png
 mednafen/
