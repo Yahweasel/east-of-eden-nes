@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019 Yahweasel
+ * Copyright (c) 2019-2020 Yahweasel
  *
  * Permission to use, copy, modify, and/or distribute this software for any
  * purpose with or without fee is hereby granted, provided that the above
@@ -136,9 +136,9 @@ void main()
     pos.dir = SPRITE_DOWN;
     loadCharacter(0, CHAR_abel);
 
-    pos.bank = WORLD_civil_war_battlefield_BANK;
-    pos.idx = WORLD_civil_war_battlefield;
-    loadCharacter(0, CHAR_cyrus);
+    pos.bank = WORLD_cyrus_home_BANK;
+    pos.idx = WORLD_cyrus_home;
+    loadCharacter(0, CHAR_adam);
 
     /* And run the game */
     while (1) {

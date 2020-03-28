@@ -13,8 +13,12 @@ _spriteTable:
 .word _confederate
 .import _cyrus_oneleg
 .word _cyrus_oneleg
+.import _adam
+.word _adam
 .import _every_woman
 .word _every_woman
+.import _charles
+.word _charles
 _characterTable:
 .import _abelC
 .word _abelC
@@ -26,3 +30,5 @@ _characterTable:
 .word _confederateC
 .import _cyrus_onelegC
 .word _cyrus_onelegC
+.import _adamC
+.word _adamC

@@ -72,8 +72,9 @@ void cdecl loadStatNamePrime(char idx, char st)
 
 
 /* The sprites themselves */
-#define S(id, name, p1, p2, p3) \
-const struct SpriteInfo id = {name, {0x ## p1, 0x ## p2, 0x ## p3}, CHR_ ## id ## _BANK, CHR_ ## id}
+#define SA(id, aof, name, p1, p2, p3) \
+const struct SpriteInfo id = {name, {0x ## p1, 0x ## p2, 0x ## p3}, CHR_ ## aof ## _BANK, CHR_ ## aof}
+#define S(id, name, p1, p2, p3) SA(id, id, name, p1, p2, p3)
 S(abel,  "Abel",        f,  f,  8);
 S(cain,  "Cain",        f, 16,  8);
 S(cyrus, "Cyrus",       f,  2, 28);
@@ -83,6 +84,10 @@ S(cyrus_oneleg,
          "Cyrus",       f,  2, 28);
 S(every_woman, "Female character",
                        30, 17, 38);
+SA(adam, abel, "Adam",
+                        f,  1, 38);
+SA(charles, cain, "Charles",
+                        f, 16, 38);
 
 /* And the characters themselves */
 #define C(id, hp, mp, s1, s2, s3, s4) \
@@ -109,6 +114,11 @@ CF(cyrus_oneleg, 173,0,      47,      1,      1,     39,
             "Number of legs",
             "Number of children",
             "Love for children");
+CF(adam, 1, 1, 1, 1, 1, 1,
+            "A",
+            "B",
+            "C",
+            "D");
 
 
 #pragma data-name (push, "JUMPS")

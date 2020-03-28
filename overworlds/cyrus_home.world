@@ -1,0 +1,44 @@
+palette 0f 28 30 30     0f 8 7 6
+chr back1
+
+# Tile
+def space   14 1
+def ^       18 1
+def #       1c 1 1
+
+sprite 5   5 cyrus 10
+sprite 6   6 every_woman 20
+# Actually charles:
+sprite 4   6 charles 30
+
+world
+################
+#              #
+#              #
+#              #
+#              #
+#              #
+#    ^         #
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+################
