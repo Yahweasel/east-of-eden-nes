@@ -118,7 +118,7 @@ void cdecl menuPrime()
             while (!(inp = readjoy())) {
                 waitvsync();
                 spriteLocs[chr].status = SPRITE_DOWN | ((tickcount>>3)&0x3);
-                updateSprite(0);
+                updateSprite(chr);
             }
 
             spriteLocs[chr].yt = 0xFE;
@@ -127,6 +127,26 @@ void cdecl menuPrime()
 
         if (inp & (JOY_START|JOY_B))
             break;
+        else if (inp & (JOY_RIGHT|JOY_LEFT)) {
+            /* Hide the old character */
+            spriteLocs[chr].xt = SCREEN_WIDTH - 3;
+            spriteLocs[chr].yt = 0xFE;
+            updateSprite(chr);
+
+            /* Advance to the new character */
+            if (inp & JOY_RIGHT) {
+                chr++;
+                if (chr >= NUM_PARTY || characters[chr].spriteNum == 0xFF)
+                    chr = 0;
+            } else {
+                if (chr == 0)
+                    chr = NUM_PARTY-1;
+                else chr--;
+                while (chr != 0 && characters[chr].spriteNum == 0xFF)
+                    chr--;
+            }
+
+        }
     }
 
     fadeout();

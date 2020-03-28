@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019 Yahweasel
+ * Copyright (c) 2019-2020 Yahweasel
  *
  * Permission to use, copy, modify, and/or distribute this software for any
  * purpose with or without fee is hereby granted, provided that the above
@@ -157,7 +157,26 @@ char cdecl cyrusVsConfederate(char idx)
 
     loadCharacter(0, CHAR_cyrus_oneleg);
 
+    /* FIXME: Some scene to transition to home life */
+
     return 0;
+}
+
+/* Part I Chapter 3 Section 3: Peewee */
+char cdecl peeweeReq(char idx)
+{
+    dialogue(idx, "Charles: Hey Adam, let's play Peewee!");
+    dialogue(-1, "Alice: Now children, be careful. Don't hurt yourselves!");
+    dialogue(0, "Adam: You're not my real mom!");
+
+    spriteLocs[idx].xscreen = -1;
+    updateSprite(idx);
+
+    loadCharacter(1, CHAR_charles);
+
+    overworldReload(0);
+
+    return 1;
 }
 
 #define TEST(n) \

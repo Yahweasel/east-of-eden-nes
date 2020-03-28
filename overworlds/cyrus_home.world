@@ -9,7 +9,7 @@ def #       1c 1 1
 sprite 5   5 cyrus 10
 sprite 6   6 every_woman 20
 # Actually charles:
-sprite 4   6 charles 30
+sprite 4   6 charles 30 peeweeReq
 
 world
 ################

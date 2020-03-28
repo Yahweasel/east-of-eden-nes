@@ -114,6 +114,11 @@ CF(cyrus_oneleg, 173,0,      47,      1,      1,     39,
             "Number of legs",
             "Number of children",
             "Love for children");
+CF(charles, 1, 1, 1, 1, 1, 1,
+            "A",
+            "B",
+            "C",
+            "D");
 CF(adam, 1, 1, 1, 1, 1, 1,
             "A",
             "B",
