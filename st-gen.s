@@ -23,6 +23,8 @@ _spriteTable:
 .word _mrsames
 .import _cathy
 .word _cathy
+.import _fire
+.word _fire
 .import _every_woman
 .word _every_woman
 .import _peewee
@@ -48,3 +50,5 @@ _characterTable:
 .word _mrsamesC
 .import _cathyC
 .word _cathyC
+.import _fireC
+.word _fireC

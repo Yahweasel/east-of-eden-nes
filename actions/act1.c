@@ -494,6 +494,91 @@ char cathyIntro() {
     return 0;
 }
 
+/* Cathy's conversation with her parents that turns her evil (in this story) */
+char cdecl cathyGoesEvil(char idx)
+{
+    static char i;
+
+    dialogue(0, "Fei-Zhang Ames: Hurry, you'll be late. It's nearly nine.");
+    dialogue(1, "Cathy: I'm not going.");
+    dialogue(0, "Are you sick?");
+    dialogue(1, "No.");
+    dialogue(0, "Then hurry, get up.");
+    dialogue(1, "I'm not going.");
+    dialogue(0, "You must be sick. You've never missed a day.");
+    dialogue(1, "I'm not going to school. I'm never going to school again.");
+    dialogue(0, "What do you mean?!");
+    dialogue(1, "Not ever.");
+    dialogue(0, "Well, we'll just see what your father has to say about that! With all our work and expense, and two years before you get your certificate!");
+    dialogue(0, "You aren't thinking of getting married?");
+    dialogue(1, "No.");
+    dialogue(0, "What's that book you're hiding?");
+    dialogue(1, "Here, I'm not hiding it.");
+
+    for (i = 0; i < 8; i++) {
+        spriteLocs[1].xs++;
+        updateSprite(1);
+        pause(2);
+    }
+    for (i = 0; i < 8; i++) {
+        spriteLocs[1].xs--;
+        updateSprite(1);
+        pause(2);
+    }
+
+    dialogue(0, "Oh! Alice in Wonderland. You're too big for that.");
+    dialogue(1, "I can get to be so little you can't even see me.");
+    dialogue(0, "What in the world are you talking about?");
+    dialogue(1, "Nobody can find me.");
+    dialogue(0, "Stop making jokes. I don't know what you're thinking of. What does Miss Fancy think she is going to do?");
+    dialogue(1, "I don't know yet. I think I'll go away.");
+    dialogue(0, "Well, you just lie there, Miss Fancy, and when your father comes home he'll have a thing or two to say to you.");
+    dialogue(1, "...");
+
+    for (i = 0; i < 8; i++) {
+        spriteLocs[0].xs++;
+        updateSprite(0);
+        pause(2);
+    }
+
+    dialogue(1, "...");
+
+    for (i = 0; i < 8; i++) {
+        spriteLocs[0].xs++;
+        updateSprite(0);
+        pause(2);
+    }
+
+    /* Move to the home, aflame now */
+    pos.bank = WORLD_ames_home_aflame_BANK;
+    pos.idx = WORLD_ames_home_aflame;
+    pos.xscreen = 1;
+    pos.xt = 4;
+    pos.yscreen = 0;
+    pos.yt = 12;
+
+    return 0;
+}
+
+/* Ames' parents die in fire */
+char cdecl amesBurns(char idx)
+{
+    /* Time to "battle" fire */
+    fadetime = FADE_TIME_VERYFAST;
+    fadeout();
+
+    loadCharacter(NUM_CHARACTERS, CHAR_fire);
+    loadCharacter(NUM_CHARACTERS+1, CHAR_fire);
+    loadCharacter(NUM_CHARACTERS+2, CHAR_fire);
+    loadCharacter(NUM_CHARACTERS+3, CHAR_fire);
+
+    battleConfig.inescapable = 1;
+    battleConfig.knockout = 0;
+    battle();
+
+    return 1;
+}
+
 #define TEST(n) \
 char cdecl test ## n() \
 { \

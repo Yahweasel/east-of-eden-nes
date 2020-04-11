@@ -96,6 +96,8 @@ SA(mrsames, every_woman, "Mrs. Ames",
                        30, 17, 38);
 S(cathy, "Cathy",
                         6, 28, 38);
+SA(fire, cathy, "Fire",
+                        16, 16, 16);
 
 /* And the characters themselves */
 #define C(id, hp, mp, s1, s2, s3, s4) \
@@ -143,6 +145,7 @@ CF(mrsames, 74, 0, 100, 1, 100, 97,
             "Trust in her perfect daughter",
             "Na}vety");
 C(cathy, 1, 1, 1, 1, 1, 1);
+C(fire, 1000, 1000, 1000, 1000, 1000, 1000);
 
 #pragma data-name (push, "JUMPS")
 void *jc1 = (void *) loadSpriteIdxPrime;

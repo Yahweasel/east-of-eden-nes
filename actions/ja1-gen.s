@@ -26,6 +26,10 @@
 .word _ruttyRoad8
 .import _ruttyRoad9
 .word _ruttyRoad9
+.import _cathyGoesEvil
+.word _cathyGoesEvil
+.import _amesBurns
+.word _amesBurns
 .import _test0
 .word _test0
 .import _test1

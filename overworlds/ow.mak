@@ -5,6 +5,7 @@ OWS=\
 	peewee.ow \
 	rutty_road.ow \
 	ames_home.ow \
+	ames_home_aflame.ow \
 	ff3a.ow \
 	ff3b.ow \
 	ff3c.ow \

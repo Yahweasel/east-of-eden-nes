@@ -25,18 +25,22 @@ ow5: .include "ames_home.ow"
 .segment "JUMPS"
 .word ow5
 .segment "RODATA"
-ow6: .include "ff3a.ow"
+ow6: .include "ames_home_aflame.ow"
 .segment "JUMPS"
 .word ow6
 .segment "RODATA"
-ow7: .include "ff3b.ow"
+ow7: .include "ff3a.ow"
 .segment "JUMPS"
 .word ow7
 .segment "RODATA"
-ow8: .include "ff3c.ow"
+ow8: .include "ff3b.ow"
 .segment "JUMPS"
 .word ow8
 .segment "RODATA"
-ow9: .include "ff3d.ow"
+ow9: .include "ff3c.ow"
 .segment "JUMPS"
 .word ow9
+.segment "RODATA"
+ow10: .include "ff3d.ow"
+.segment "JUMPS"
+.word ow10
