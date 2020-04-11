@@ -217,6 +217,8 @@ void peeweeThrowGreat(char pwIdx)
     }
 }
 
+/* From leaving to play Peewee through... pretty much Adam and Charles' entire
+ * childhoods */
 char cdecl peeweeLeave(char idx)
 {
     /* FIXME: Loop over sprites to choose the right one, don't just assume! */
@@ -281,7 +283,174 @@ char cdecl peeweeLeave(char idx)
     pos.yt = 6;
     pos.dir = SPRITE_DOWN;
 
+    overworldLoad(pos.bank, pos.idx);
+    fadein();
+
+    pause(120);
+
+    fadeout();
+
+    /* Prepare for full-screen text! */
+    discardScrollInfo();
+    clrscr();
+    clearSprites();
+
+    fullscreen("Years later...");
+
+    /* Onto the rutty road */
+    pos.bank = WORLD_rutty_road_BANK;
+    pos.idx = WORLD_rutty_road;
+    pos.xscreen = pos.yscreen = 0;
+    pos.xt = 2;
+    pos.yt = 6;
+    pos.dir = SPRITE_RIGHT;
+
+    loadCharacter(1, CHAR_charles);
+
     return 0;
+}
+
+#define RIGHT_ONLY() do { \
+    if (pos.dir != SPRITE_RIGHT) { \
+        pos.xt++; \
+        spriteLocs[0].xt++; \
+        updateSprite(0); \
+        return 1; \
+    } \
+} while(0)
+
+#define RIGHT_FORCE() do { \
+    pos.xt++; \
+    spriteLocs[0].xt++; \
+    updateSprite(0); \
+} while (0)
+
+/* Walking down the rutty road */
+char cdecl ruttyRoad1(char idx)
+{
+    RIGHT_ONLY();
+
+    /* FIXME: Make this sprite appear correctly */
+    dialogue(1, "Charles: Want to go in and see if anything's stirring at the inn?");
+    dialogue(0, "Adam: I hadn't thought of it.");
+    overworldReload(0);
+
+    RIGHT_FORCE();
+
+    return 1;
+}
+
+/* Walking down the rutty road part deux */
+char cdecl ruttyRoad2(char idx)
+{
+    RIGHT_ONLY();
+
+    dialogue(1, "Then what the hell are you walking out at night for?");
+    dialogue(0, "You didn't have to come.");
+    overworldReload(0);
+
+    RIGHT_FORCE();
+
+    return 1;
+}
+
+/* Walking down the rutty road part troix */
+char cdecl ruttyRoad3(char idx)
+{
+    RIGHT_ONLY();
+
+    dialogue(1, "What did he say to you this afternoon? I saw you walking together. What did he say?");
+    dialogue(0, "He just talked about the army_like always.");
+    dialogue(1, "Didn't look like that to me.");
+    overworldReload(0);
+
+    RIGHT_FORCE();
+
+    return 1;
+}
+
+/* Walking down the rutty road part el four */
+char cdecl ruttyRoad4(char idx)
+{
+    RIGHT_ONLY();
+
+    dialogue(1, "I saw him leaning close, talking the way he talks to men_not telling, talking.");
+    dialogue(0, "He was telling.");
+    dialogue(1, "What did he tell you?!");
+    overworldReload(0);
+
+    RIGHT_FORCE();
+
+    return 1;
+}
+
+/* Walking down the rutty road part el five */
+char cdecl ruttyRoad5(char idx)
+{
+    RIGHT_ONLY();
+
+    dialogue(0, "About the army and how it is to be a soldier.");
+    dialogue(1, "I don't believe you! I think you're a goddam mealy-mouthed liar. What're you trying to get away with?");
+    dialogue(0, "Nothing.");
+    overworldReload(0);
+
+    RIGHT_FORCE();
+
+    return 1;
+}
+
+/* Walking down the rutty road part el six */
+char cdecl ruttyRoad6(char idx)
+{
+    RIGHT_ONLY();
+
+    dialogue(1, "Your crazy mother drowned herself. Maybe she took a look at you. That'd do it.");
+    overworldReload(0);
+
+    RIGHT_FORCE();
+
+    return 1;
+}
+
+/* Walking down the rutty road part el seven */
+char cdecl ruttyRoad7(char idx)
+{
+    RIGHT_ONLY();
+
+    dialogue(1, "You're trying to take him away! I don't know how you're going about it. What do you think you're doing?");
+    dialogue(0, "Nothing.");
+    overworldReload(0);
+
+    RIGHT_FORCE();
+
+    return 1;
+}
+
+/* Walking down the rutty road part el eight */
+char cdecl ruttyRoad8(char idx)
+{
+    RIGHT_ONLY();
+
+    dialogue(1, "Look at his birthday!");
+    dialogue(1, "I took six bits and I bought him a knife made in Germany_three blades and a corkscrew, pearl-handled. Where's that knife? Do you ever see him use it? Did he give it to you? I never even saw him hone it. Have you got that knife in your pocket? What did he do with it? \"Thanks,\" he said, like that. And that’s the last I heard of a pearl-handled German knife that cost six bits.");
+    overworldReload(0);
+
+    RIGHT_FORCE();
+
+    return 1;
+}
+
+/* Walking down the rutty road part el nine */
+char cdecl ruttyRoad9(char idx)
+{
+    RIGHT_ONLY();
+
+    dialogue(1, "What did you do on his birthday? You think I didn't see? Did you spend six bits or even four bits? You brought him a mongrel pup you picked up in the woodlot. You laughed like a fool and said it would make a good bird dog. That dog sleeps in his room. He plays with it while he's reading. He's got it all trained. And where's the knife? \"Thanks,\" he said, just \"Thanks.\"");
+    overworldReload(0);
+
+    RIGHT_FORCE();
+
+    return 1;
 }
 
 #define TEST(n) \

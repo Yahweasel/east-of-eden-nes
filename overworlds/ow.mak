@@ -3,6 +3,7 @@ OWS=\
 	civil_war_battlefield.ow \
 	cyrus_home.ow \
 	peewee.ow \
+	rutty_road.ow \
 	ff3a.ow \
 	ff3b.ow \
 	ff3c.ow \

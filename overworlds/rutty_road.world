@@ -1,0 +1,82 @@
+palette 0f 28 30 30     0f 19 18 36     0f 0 10 28
+chr back1
+
+# Grass
+def g       00 1
+
+# Trees
+def ^       08 1 1
+def #       0c 1 1
+def T       10 1 1
+
+# Roadway
+def space   00 2
+def -       20 2
+
+# Can't go past the left
+def 0       00 2 1
+def |       20 2 1
+
+# Event 1
+def 1       00 2 0 ruttyRoad1
+def !       20 2 0 ruttyRoad1
+def Q       00 1 0 ruttyRoad1
+
+# Event 2
+def 2       00 2 0 ruttyRoad2
+def @       20 2 0 ruttyRoad2
+def W       00 1 0 ruttyRoad2
+
+# Event 3
+def 3       00 2 0 ruttyRoad3
+def D       20 2 0 ruttyRoad3
+def E       00 1 0 ruttyRoad3
+
+# Event 4
+def 4       00 2 0 ruttyRoad4
+def $       20 2 0 ruttyRoad4
+def R       00 1 0 ruttyRoad4
+
+# Event 5
+def 5       00 2 0 ruttyRoad5
+def %       20 2 0 ruttyRoad5
+def G       00 1 0 ruttyRoad5
+
+# Event 6
+def 6       00 2 0 ruttyRoad6
+def H       20 2 0 ruttyRoad6
+def Y       00 1 0 ruttyRoad6
+
+# Event 7
+def 7       00 2 0 ruttyRoad7
+def &       20 2 0 ruttyRoad7
+def U       00 1 0 ruttyRoad7
+
+# Event 8
+def 8       00 2 0 ruttyRoad8
+def *       20 2 0 ruttyRoad8
+def I       00 1 0 ruttyRoad8
+
+# Event 9
+def 9       00 2 0 ruttyRoad9
+def (       20 2 0 ruttyRoad9
+def O       00 1 0 ruttyRoad9
+
+sprite 0 0 charles 00
+
+world
+####TTTTT####TT#TT####TT##TT#########TT#########
+###TgQgggTTTTggTgRTTTTggTTggT######TTgg#######T#
+##TggQgggWgggEgggRgggGgggYgggTT###TggOgTT####TgT
+TTgggQgggWgggEgggRgggGgggYgggUgTTTgggOgggTTTTggg
+0    1   2   3   4   5   6   7   8   9          
+0    1   2   3   4   5   6   7   8   9          
+0    1   2   3   4   5   6   7   8   9          
+|----!---@---D---$---%---H---&---*---(----------
+0    1   2   3   4   5   6   7   8   9          
+0    1   2   3   4   5   6   7   8   9          
+0    1   2   3   4   5   6   7   8   9          
+^^^ggQgggWgggEgggRgggGgggYggg^^^gIgggOgggggg^^gg
+###^^^gggWg^gEgg^^^gg^^gg^^g^###^ggggg^^^gg^##^^
+######^^^^^#^^^^###^^##^^##^#####^^^g^###^^#####
+####################################^###########
