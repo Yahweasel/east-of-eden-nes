@@ -440,17 +440,58 @@ char cdecl ruttyRoad8(char idx)
     return 1;
 }
 
+char cathyIntro(void);
+
 /* Walking down the rutty road part el nine */
 char cdecl ruttyRoad9(char idx)
 {
     RIGHT_ONLY();
 
     dialogue(1, "What did you do on his birthday? You think I didn't see? Did you spend six bits or even four bits? You brought him a mongrel pup you picked up in the woodlot. You laughed like a fool and said it would make a good bird dog. That dog sleeps in his room. He plays with it while he's reading. He's got it all trained. And where's the knife? \"Thanks,\" he said, just \"Thanks.\"");
-    overworldReload(0);
 
-    RIGHT_FORCE();
+    /* Now Adam fights Charles (and loses again) */
+    characters[1].spriteNum = -1;
+    loadCharacter(NUM_CHARACTERS, CHAR_charles);
 
-    return 1;
+    fadetime = FADE_TIME_VERYFAST;
+    fadeout();
+    battleConfig.inescapable = 1;
+    battleConfig.knockout = 1;
+    battle();
+
+    /* Prepare for full-screen text! */
+    discardScrollInfo();
+    clrscr();
+    clearSprites();
+
+    fullscreen("Consciousness came back quick and frightening to Adam. His mind rolled in a painful mist. He pushed himself up on his knees and dragged himself off the road to the ditch that kept it drained. There was a foot of water in the ditch. Adam crawled quietly into the water, being very careful to make no splash.");
+
+    fullscreen("The footsteps came close, slowed, moved on a little, came back. A sulphur match was struck and burned a tiny blue until the wood caught, lighting his brother's face grotesquely from below. Charles raised the match and peered around, and Adam could see the hatchet in his right hand.");
+
+    fullscreen("When the match went out the night was blacker than before. At last Charles gave it up. His right hand rose and he threw the hatchet far off into the field. He walked rapidly away toward the pinched lights of the village.");
+
+    return cathyIntro();
+}
+
+/* Part I Chapter 8 Section I: Cathy's introduction */
+char cathyIntro() {
+    pause(120);
+
+    /* Move to Cathy's home as her parents */
+    pos.bank = WORLD_ames_home_BANK;
+    pos.idx = WORLD_ames_home;
+    pos.xt = 5;
+    pos.yt = 5;
+
+    loadCharacter(0, CHAR_mrsames);
+    loadCharacter(1, CHAR_mrames);
+
+    fullscreen("ACT II");
+
+    fullscreen("I believe there are monsters born in the world to human parents.");
+    fullscreen("It is my belief that Cathy Ames was born with the tendencies, or lack of them, which drove and forced her all of her life. Some balance wheel was misweighted, some gear out of ratio. She was not like other people, never was from birth. And just as a cripple may learn to utilize his lack so that he becomes more effective in a limited field than the uncrippled, so did Cathy, using her difference, make a painful and bewildering stir in her world.");
+
+    return 0;
 }
 
 #define TEST(n) \

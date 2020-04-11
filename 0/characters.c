@@ -90,6 +90,12 @@ SA(charles, cain, "Charles",
                         f, 16, 38);
 SA(peewee, abel, "Peewee ball",
                        30,  6,  f);
+SA(mrames, abel, "Mr. Ames",
+                        f,  1, 38);
+SA(mrsames, every_woman, "Mrs. Ames",
+                       30, 17, 38);
+S(cathy, "Cathy",
+                        6, 28, 38);
 
 /* And the characters themselves */
 #define C(id, hp, mp, s1, s2, s3, s4) \
@@ -126,7 +132,17 @@ CF(adam, 60, 0, 12, 29, 100, 96,
             "Respect for his father",
             "Love for his brother Charles",
             "Skill at peewee");
-
+CF(mrames, 87, 0, 100, 1, 100, 100,
+            "Flammability",
+            "Remaining years of life",
+            "Trust in his perfect daughter",
+            "Na}vety");
+CF(mrsames, 74, 0, 100, 1, 100, 97,
+            "Flammability",
+            "Remaining years of life",
+            "Trust in her perfect daughter",
+            "Na}vety");
+C(cathy, 1, 1, 1, 1, 1, 1);
 
 #pragma data-name (push, "JUMPS")
 void *jc1 = (void *) loadSpriteIdxPrime;

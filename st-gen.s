@@ -17,6 +17,12 @@ _spriteTable:
 .word _charles
 .import _adam
 .word _adam
+.import _mrames
+.word _mrames
+.import _mrsames
+.word _mrsames
+.import _cathy
+.word _cathy
 .import _every_woman
 .word _every_woman
 .import _peewee
@@ -36,3 +42,9 @@ _characterTable:
 .word _charlesC
 .import _adamC
 .word _adamC
+.import _mramesC
+.word _mramesC
+.import _mrsamesC
+.word _mrsamesC
+.import _cathyC
+.word _cathyC

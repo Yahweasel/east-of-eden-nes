@@ -21,18 +21,22 @@ ow4: .include "rutty_road.ow"
 .segment "JUMPS"
 .word ow4
 .segment "RODATA"
-ow5: .include "ff3a.ow"
+ow5: .include "ames_home.ow"
 .segment "JUMPS"
 .word ow5
 .segment "RODATA"
-ow6: .include "ff3b.ow"
+ow6: .include "ff3a.ow"
 .segment "JUMPS"
 .word ow6
 .segment "RODATA"
-ow7: .include "ff3c.ow"
+ow7: .include "ff3b.ow"
 .segment "JUMPS"
 .word ow7
 .segment "RODATA"
-ow8: .include "ff3d.ow"
+ow8: .include "ff3c.ow"
 .segment "JUMPS"
 .word ow8
+.segment "RODATA"
+ow9: .include "ff3d.ow"
+.segment "JUMPS"
+.word ow9

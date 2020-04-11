@@ -18,9 +18,9 @@ def 0       00 2 1
 def |       20 2 1
 
 # Event 1
-def 1       00 2 0 ruttyRoad1
-def !       20 2 0 ruttyRoad1
-def Q       00 1 0 ruttyRoad1
+def 1       00 2 0 ruttyRoad9
+def !       20 2 0 ruttyRoad9
+def Q       00 1 0 ruttyRoad9
 
 # Event 2
 def 2       00 2 0 ruttyRoad2

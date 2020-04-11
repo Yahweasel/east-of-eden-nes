@@ -136,11 +136,12 @@ void main()
     pos.dir = SPRITE_DOWN;
     loadCharacter(0, CHAR_abel);
 
-    pos.bank = WORLD_rutty_road_BANK;
-    pos.idx = WORLD_rutty_road;
-    pos.xt = 2;
-    loadCharacter(0, CHAR_adam);
-    loadCharacter(1, CHAR_charles);
+    pos.bank = WORLD_ames_home_BANK;
+    pos.idx = WORLD_ames_home;
+    pos.xt = 5;
+    pos.yt = 5;
+    loadCharacter(0, CHAR_mrsames);
+    loadCharacter(1, CHAR_mrames);
 
     /* And run the game */
     while (1) {

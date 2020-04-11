@@ -4,6 +4,7 @@ OWS=\
 	cyrus_home.ow \
 	peewee.ow \
 	rutty_road.ow \
+	ames_home.ow \
 	ff3a.ow \
 	ff3b.ow \
 	ff3c.ow \

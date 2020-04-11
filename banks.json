@@ -12,7 +12,10 @@
             "confederate",
             "cyrus_oneleg",
             "charles",
-            "adam"
+            "adam",
+            "mrames",
+            "mrsames",
+            "cathy"
         ]
     },
 
@@ -33,7 +36,7 @@
             ["confederate", 2],
             ["cyrus_oneleg", 2],
             ["every_woman", 2],
-            ["spr1_7", 2],
+            ["cathy", 2],
             ["spr1_8", 2]
         ]
     },
@@ -46,6 +49,7 @@
             "cyrus_home",
             "peewee",
             "rutty_road",
+            "ames_home",
             "ff3a",
             "ff3b",
             "ff3c",
