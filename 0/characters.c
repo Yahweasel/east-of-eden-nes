@@ -88,6 +88,8 @@ SA(adam, abel, "Adam",
                         f,  1, 38);
 SA(charles, cain, "Charles",
                         f, 16, 38);
+SA(peewee, abel, "Peewee ball",
+                       30,  6,  f);
 
 /* And the characters themselves */
 #define C(id, hp, mp, s1, s2, s3, s4) \
@@ -114,16 +116,16 @@ CF(cyrus_oneleg, 173,0,      47,      1,      1,     39,
             "Number of legs",
             "Number of children",
             "Love for children");
-CF(charles, 1, 1, 1, 1, 1, 1,
-            "A",
-            "B",
-            "C",
-            "D");
-CF(adam, 1, 1, 1, 1, 1, 1,
-            "A",
-            "B",
-            "C",
-            "D");
+CF(charles, 10000, 10000, 100, 100, 16, 26,
+            "Deep-seated family issues",
+            "Resentment",
+            "Love for his brother Adam",
+            "Skill at peewee");
+CF(adam, 60, 0, 12, 29, 100, 96,
+            "Emotional maturity",
+            "Respect for his father",
+            "Love for his brother Charles",
+            "Skill at peewee");
 
 
 #pragma data-name (push, "JUMPS")

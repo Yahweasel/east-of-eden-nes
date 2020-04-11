@@ -13,6 +13,10 @@ def _       00 1 0 test0
 # Wheat
 def w       04 1
 
+sprite 8   9 charles 30
+
+sprite 9   9 peewee 60
+
 world
 ################################
 ####TTTTT####TT#TT####TT##TT####

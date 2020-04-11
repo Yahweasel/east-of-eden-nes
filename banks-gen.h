@@ -18,6 +18,8 @@
 #define SPR_adam_BANK BANK_0
 #define SPR_every_woman 7
 #define SPR_every_woman_BANK BANK_0
+#define SPR_peewee 8
+#define SPR_peewee_BANK BANK_0
 #define CHAR_abel 0
 #define CHAR_abel_BANK BANK_0
 #define CHAR_cain 1

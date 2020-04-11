@@ -19,6 +19,8 @@ _spriteTable:
 .word _adam
 .import _every_woman
 .word _every_woman
+.import _peewee
+.word _peewee
 _characterTable:
 .import _abelC
 .word _abelC

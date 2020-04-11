@@ -35,7 +35,7 @@ char cdecl cainAndAbel(char idx)
     fadetime = FADE_TIME_VERYFAST;
     fadeout();
 
-    loadCharacter(NUM_CHARACTERS, SPR_cain);
+    loadCharacter(NUM_CHARACTERS, CHAR_cain);
 
     battleConfig.inescapable = 1;
     cab = battle();
@@ -183,8 +183,46 @@ char cdecl peeweeReq(char idx)
     return 1;
 }
 
+void peeweeThrowTerrible(char pwIdx)
+{
+#include "gen-arc1.c"
+}
+
+void peeweeThrowGreat(char pwIdx)
+{
+    static char i;
+
+    spriteLocs[pwIdx].xt = 8;
+    spriteLocs[pwIdx].xs = 12;
+    spriteLocs[pwIdx].yt = 8;
+    spriteLocs[pwIdx].ys = 0;
+    updateSprite(pwIdx);
+
+    /* Move the peewee ball for Adam... */
+    for (i = 0; i < 60; i++) {
+        if (spriteLocs[pwIdx].xs >= 15) {
+            spriteLocs[pwIdx].xt++;
+            spriteLocs[pwIdx].xs = 0;
+        } else {
+            spriteLocs[pwIdx].xs++;
+        }
+        if (spriteLocs[pwIdx].ys == 0) {
+            spriteLocs[pwIdx].yt--;
+            spriteLocs[pwIdx].xs = 15;
+        } else {
+            spriteLocs[pwIdx].ys--;
+        }
+        updateSprite(pwIdx);
+        pause(1);
+    }
+}
+
 char cdecl peeweeLeave(char idx)
 {
+    /* FIXME: Loop over sprites to choose the right one, don't just assume! */
+    const char charlesIdx = 1;
+    const char pwIdx = 2;
+
     pos.bank = WORLD_peewee_BANK;
     pos.idx = WORLD_peewee;
     pos.xscreen = pos.yscreen = 0;
@@ -195,9 +233,42 @@ char cdecl peeweeLeave(char idx)
     pause(60);
 
     overworldLoad(pos.bank, pos.idx);
+    spriteLocs[pwIdx].xt = 8;
+    spriteLocs[pwIdx].xs = 12;
+    updateSprite(pwIdx);
     fadein();
 
-    dialogue(1, "Charles: lol u sux bruh");
+    dialogue(charlesIdx, "Charles: I'm amazing at this, just watch me!");
+    overworldReload(0);
+
+    /* Move the peewee ball */
+    peeweeThrowTerrible(pwIdx);
+
+    dialogue(0, "Adam: That was great, let me try!");
+    overworldReload(0);
+
+    peeweeThrowGreat(pwIdx);
+
+    dialogue(charlesIdx, "...");
+    dialogue(0, "I guess it was just an accident...");
+    overworldReload(0);
+
+    peeweeThrowTerrible(pwIdx);
+
+    dialogue(charlesIdx, "...");
+    dialogue(0, "... I bet I couldn't do it again.");
+    overworldReload(0);
+
+    peeweeThrowGreat(pwIdx);
+
+    dialogue(charlesIdx, "...");
+
+    /* Now Adam fights Charles (and loses) */
+    /* FIXME: Charles is probably also on our team */
+    loadCharacter(NUM_CHARACTERS, CHAR_charles);
+
+    battleConfig.inescapable = 1;
+    battle();
 
     return 0;
 }

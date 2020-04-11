@@ -2,7 +2,8 @@
     {
         "name": "0",
         "sprites": [
-            "every_woman"
+            "every_woman",
+            "peewee"
         ],
         "characters": [
             "abel",
