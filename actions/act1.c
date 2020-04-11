@@ -267,8 +267,19 @@ char cdecl peeweeLeave(char idx)
     /* FIXME: Charles is probably also on our team */
     loadCharacter(NUM_CHARACTERS, CHAR_charles);
 
+    fadetime = FADE_TIME_VERYFAST;
+    fadeout();
     battleConfig.inescapable = 1;
+    battleConfig.knockout = 1;
     battle();
+
+    /* Move him back home for rehabilitation */
+    pos.bank = WORLD_cyrus_home_BANK;
+    pos.idx = WORLD_cyrus_home;
+    pos.xscreen = pos.yscreen = 0;
+    pos.xt = 5;
+    pos.yt = 6;
+    pos.dir = SPRITE_DOWN;
 
     return 0;
 }

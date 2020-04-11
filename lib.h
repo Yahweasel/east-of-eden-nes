@@ -295,6 +295,7 @@ struct ScrollInfo {
 /* Battle configuration */
 struct Battle {
     char inescapable;
+    char knockout;
 };
 
 

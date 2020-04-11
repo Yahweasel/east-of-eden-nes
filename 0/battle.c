@@ -561,7 +561,10 @@ static void fight(char actorIsEnemy)
     if (!target->hp) {
         printCursor(WIN_LEFT+2, WIN_TOP+7);
         printStr(strBuf);
-        printStr(" dies!");
+        if (battleConfig.knockout)
+            printStr(" is unconscious!");
+        else
+            printStr(" dies!");
     }
 
     waitjoy();
